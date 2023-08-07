@@ -165,7 +165,9 @@ const HuiTabs: React.FC<HuiTabsProps> = (props) => {
       </View>
     ) : (
       <View
-        className='tabs-indicator'
+        className={cx('tabs-indicator', {
+          [`tabs-indicator-transition`]: animated,
+        })}
         style={{
           width: activeTabInfo.width,
           left: activeTabInfo.left,
